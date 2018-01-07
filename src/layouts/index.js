@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import github from '../img/github-icon.svg';
-import logo from '../img/logo.svg';
 import './all.sass';
 
 const Navbar = () => (
@@ -11,9 +10,7 @@ const Navbar = () => (
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
+          Crypto blog
         </Link>
       </div>
       <div className="navbar-start">
@@ -24,20 +21,14 @@ const Navbar = () => (
           Products
         </Link>
       </div>
-      <div className="navbar-end">
-        <a className="navbar-item" href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate" target="_blank" rel="noopener noreferrer">
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
+      <div className="navbar-end" />
     </div>
   </nav>
 );
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="Home | Crypto blog" />
     <Navbar />
     <div>{children()}</div>
   </div>
